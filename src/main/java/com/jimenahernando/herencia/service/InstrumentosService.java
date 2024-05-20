@@ -1,5 +1,6 @@
 package com.jimenahernando.herencia.service;
 
+import com.jimenahernando.herencia.model.entities.joined.Cuerda;
 import com.jimenahernando.herencia.model.entities.joined.Instrumento;
 import com.jimenahernando.herencia.model.entities.joined.Viento;
 
@@ -10,4 +11,5 @@ public interface InstrumentosService {
     List<Instrumento> getInstrumentos();
     Instrumento saveInstrumento(Instrumento instrumento);
     List<Viento> getInstrumentosDeViento();
+    List<Cuerda> getInstrumentosDeCuerda();
 }

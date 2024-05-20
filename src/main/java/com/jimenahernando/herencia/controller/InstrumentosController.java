@@ -1,5 +1,6 @@
 package com.jimenahernando.herencia.controller;
 
+import com.jimenahernando.herencia.model.entities.joined.Cuerda;
 import com.jimenahernando.herencia.model.entities.joined.Instrumento;
 import com.jimenahernando.herencia.model.entities.joined.Viento;
 import com.jimenahernando.herencia.service.InstrumentosService;
@@ -34,6 +35,14 @@ public class InstrumentosController {
 
         List<Viento> instrumentosDeViento= instrumentosService.getInstrumentosDeViento();
         return new ResponseEntity<>(instrumentosDeViento, HttpStatus.OK);
+    }
+
+    @GetMapping("/cuerda")
+    public ResponseEntity<List<Cuerda>> getInstrumentosDeCuerda(){
+        log.info("INIT -> getInstrumentosDeCuerda()");
+
+        List<Cuerda> instrumentosDeCuerda= instrumentosService.getInstrumentosDeCuerda();
+        return new ResponseEntity<>(instrumentosDeCuerda, HttpStatus.OK);
     }
 
     @PostMapping

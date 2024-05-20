@@ -1,5 +1,6 @@
 package com.jimenahernando.herencia.service.impl;
 
+import com.jimenahernando.herencia.model.entities.joined.Cuerda;
 import com.jimenahernando.herencia.model.entities.joined.Instrumento;
 import com.jimenahernando.herencia.model.entities.joined.Viento;
 import com.jimenahernando.herencia.repositories.InstrumentoRepository;
@@ -30,5 +31,10 @@ public class InstrumentosServiceImpl implements InstrumentosService {
     @Override
     public List<Viento> getInstrumentosDeViento() {
         return vientoRepository.findAll();
+    }
+
+    @Override
+    public List<Cuerda> getInstrumentosDeCuerda() {
+        return instrumentoRepository.findAllCuerda();
     }
 }
