@@ -222,6 +222,18 @@
 					"response": []
 				},
 				{
+					"name": "/api/instrumentos/cuerda",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://{{url}}/api/instrumentos/cuerda"
+					},
+					"response": []
+				},
+				{
 					"name": "/api/instrumentos - Cuerda",
 					"request": {
 						"auth": {
