@@ -210,6 +210,18 @@
 					"response": []
 				},
 				{
+					"name": "/api/instrumentos/viento",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://{{url}}/api/instrumentos/viento"
+					},
+					"response": []
+				},
+				{
 					"name": "/api/instrumentos - Cuerda",
 					"request": {
 						"auth": {
