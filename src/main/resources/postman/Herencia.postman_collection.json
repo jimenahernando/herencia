@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "2ad893e9-4a38-4f88-9a41-f08ca776e519",
+		"name": "Herencia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22001463"
+	},
+	"item": [
+		{
+			"name": "Empleados",
+			"item": [
+				{
+					"name": "/api/empleados",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://{{url}}/api/empleados"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/empleados/:id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}/api/empleados/:id",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"empleados",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MappedSuperclass - Productos",
+			"item": [
+				{
+					"name": "/api/cereales",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://{{url}}/api/cereales"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/cereales",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Choco days\",\r\n    \"descripcion\": \"Cucharitas con chocolate\",\r\n    \"color\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{url}}/api/cereales"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/lupulos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://{{url}}/api/lupulos"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/lupulos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"El que te pega\",\r\n    \"pais\": \"Argentina\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{url}}/api/lupulos"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/productos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://{{url}}/api/productos"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SingleTable - Animales",
+			"item": [
+				{
+					"name": "/api/animales",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://{{url}}/api/animales"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/animales - AVE",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoAnimal\": \"Ave\",\r\n    \"nombre\": \"Águila\",\r\n    \"edad\": 3,\r\n    \"sexo\": 1,\r\n    \"colorPlumaje\": \"Marrón\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{url}}/api/animales"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/animales - MAMIFERO",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoAnimal\": \"Mamifero\",\r\n    \"nombre\": \"Gato\",\r\n    \"edad\": 7,\r\n    \"sexo\": 1,\r\n    \"cantidadMamas\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{url}}/api/animales"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Joined - Instrumentos",
+			"item": [
+				{
+					"name": "/api/instrumentos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://{{url}}/api/instrumentos"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/instrumentos - Cuerda",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoInstrumento\" : \"cuerda\",\r\n    \"nombre\": \"Chelo\",\r\n    \"cantidadCuerdas\": 3,\r\n    \"materialCuerda\": \"nylon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{url}}/api/instrumentos"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/instrumentos - Percusion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoInstrumento\" : \"percusion\",\r\n    \"nombre\": \"Bombo\",\r\n    \"diametro\": 24\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{url}}/api/instrumentos"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/instrumentos - Viento",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoInstrumento\" : \"viento\",\r\n    \"nombre\": \"trompeta\",\r\n    \"material\" : \"metal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://{{url}}/api/instrumentos"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
